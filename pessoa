@@ -1,0 +1,45 @@
+from pokemon import *
+
+
+class Pessoa:
+
+    def __init__(self, nome=None, especie,  pokemons=[]):
+
+        if nome:
+            self.nome = nome
+        else:
+            self.nome = "Anonimo"
+
+        self.pokemons = pokemons
+
+        self.especie = especie
+
+
+def __str__(self):
+    return self.nome
+
+
+def mostrar_pokemon(self):
+    for pokemon in self.pokemons:
+        print(pokemon)
+
+
+class Player(Pessoa):
+    tipo = "player"
+
+
+class Inimigo(Pessoa):
+    tipo = "inimigo"
+
+
+meu_pokemon = PokemonEletrico("picachu")
+
+meu_pokemon2 = PokemonFogo("chamander")
+
+eu = Player(nome="Edson", pokemons=[meu_pokemon, meu_pokemon2])
+
+print(eu)
+
+print(eu.pokemons)
+
+meu_pokemon.dar_choque(meu_pokemon2)
