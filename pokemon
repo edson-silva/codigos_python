@@ -1,0 +1,36 @@
+class Pokemon:
+    def __init__(self, tipo, especie, level=1, nome=None):
+        self.tipo = tipo
+        self.especie = especie
+        self.level = level
+        self.nome = nome
+
+        if nome:
+          self.nome = nome
+        else:
+          self.nome = especie
+
+    def __str__(self):
+        return "{} ({})".format(self.nome, self.level)
+
+    def atacar(self, pokemon):
+        print("{} atacou {}!".format(self, pokemon))
+
+class PokemonEletrico(Pokemon):
+          pass
+
+meu_pokemon = PokemonEletrico("eletrico", "picachu", level=5)
+
+
+amigo_pokemon = Pokemon("fogo", "charmander", level=4)
+
+
+
+print(meu_pokemon)
+print(amigo_pokemon)
+
+
+meu_pokemon.atacar(amigo_pokemon)
+amigo_pokemon.atacar(meu_pokemon)
+
+
